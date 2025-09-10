@@ -1,0 +1,230 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amirtha R.J — Portfolio</title>
+  <meta name="description" content="Portfolio of Amirtha R.J — Aspiring IT professional, BCA student, web design learner, and creative artist." />
+  <style>
+    /* Reset */
+    :root{
+      --bg-gradient: linear-gradient(135deg,#FFD1BA 0%, #FF9A8B 35%, #D98BEA 70%);
+      --card-bg: rgba(255,255,255,0.85);
+      --glass: rgba(255,255,255,0.12);
+      --accent: #ff7a59;
+      --muted: #4b4b4b;
+      --radius: 14px;
+      --shadow: 0 8px 30px rgba(0,0,0,0.12);
+      --maxwidth: 1100px;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg-gradient);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      color:#222;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:40px 20px;
+    }
+    .wrap{width:100%;max-width:var(--maxwidth);}/* Header / Hero */
+header{
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:28px;
+  align-items:center;
+  margin-bottom:28px;
+}
+.hero-card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  padding:32px;
+  box-shadow:var(--shadow);
+  backdrop-filter: blur(6px);
+}
+.hero-title{font-size:28px;margin:0 0 6px 0}
+.hero-sub{color:var(--muted);margin:0 0 18px 0}
+.cta-row{display:flex;gap:12px;align-items:center}
+.btn{padding:10px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#e86fb0);color:#fff}
+.btn-ghost{background:transparent;border:2px solid rgba(0,0,0,0.06);}
+
+/* Profile */
+.profile{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:16px;
+}
+.avatar{
+  width:220px;height:220px;border-radius:20px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,0.18);border:6px solid rgba(255,255,255,0.25);
+  background:linear-gradient(180deg,rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.profile h3{margin:0}
+.socials{display:flex;gap:10px}
+.icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:var(--glass);}
+
+/* Main grid */
+main{display:grid;grid-template-columns:1fr 360px;gap:28px}
+section.card{background:rgba(255,255,255,0.92);border-radius:12px;padding:20px;box-shadow:var(--shadow)}
+h2{margin:0 0 12px 0}
+p.lead{color:var(--muted);margin:0 0 12px 0}
+
+/* Skills */
+.skill{margin-bottom:12px}
+.skill .label{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
+.bar{height:12px;border-radius:999px;background:linear-gradient(90deg,#fff3,#fff1);overflow:hidden}
+.bar > i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),#e86fb0);width:40%}
+.muted-small{font-size:13px;color:var(--muted)}
+
+/* Achievements & Portfolio */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.art-placeholder{height:140px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.2), rgba(255,255,255,0.05));display:flex;align-items:center;justify-content:center;color:rgba(0,0,0,0.35);font-weight:600}
+
+/* Contact form */
+form{display:flex;flex-direction:column;gap:10px}
+input,textarea{padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,0.08);font-size:14px}
+textarea{min-height:120px;resize:vertical}
+
+footer{margin-top:18px;text-align:center;color:rgba(0,0,0,0.45)}
+
+/* Responsive */
+@media (max-width:980px){
+  header,main{grid-template-columns:1fr}
+  .profile{flex-direction:row;align-items:center}
+  .avatar{width:120px;height:120px;border-radius:12px}
+}
+
+/* Small animations */
+.fade-up{opacity:0;transform:translateY(12px);transition:all 520ms cubic-bezier(.2,.9,.25,1)}
+.fade-up.in{opacity:1;transform:none}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="hero-card fade-up in">
+        <h1 class="hero-title">Amirtha R.J</h1>
+        <p class="hero-sub">Aspiring IT Professional • BCA Student (A.M. Jain College, Class of 2027)</p>
+        <p class="lead">Passionate about technology, creativity, and continuous growth. Currently learning web design, C++, Python and data structures — building skills to contribute to real-world projects.</p>
+        <div class="cta-row" style="margin-top:18px">
+          <a class="btn btn-primary" href="#contact">Contact / GitHub</a>
+          <a class="btn btn-ghost" href="#about">Learn more</a>
+        </div>
+      </div><aside class="profile fade-up in">
+    <div class="avatar">
+      <!-- Replace the src with your profile image URL -->
+      <img src="profile.jpg" alt="Profile picture of Amirtha R.J">
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+      <h3>Amirtha R.J</h3>
+      <div class="muted-small">BCA Student • A.M. Jain College • 2027</div>
+      <div class="socials" style="margin-top:8px">
+        <!-- Update GitHub link -->
+        <a class="icon" href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.58.11.78-.25.78-.55 0-.28-.01-1.03-.02-2.02-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.52-2.56-.29-5.26-1.28-5.26-5.72 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.96 10.96 0 0 1 2.87-.39c.97 0 1.94.13 2.87.39 2.19-1.5 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.45-2.71 5.43-5.29 5.71.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.67.79.55C20.71 21.37 24 17.08 24 12 24 5.73 18.27.5 12 .5z" fill="#222"/></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+</header>
+
+<main>
+  <section class="card fade-up in" id="about">
+    <h2>About</h2>
+    <p class="lead">Hello, I'm <strong>Amirtha A.</strong> Currently pursuing my BCA degree at A.M. Jain College. I'm passionate about the IT industry and excited to explore opportunities that leverage my growing skills in programming and web design.</p>
+    <p class="muted-small">Interests: Drawing, Sports (medalist)</p>
+    <hr style="margin:16px 0;border:none;border-top:1px solid rgba(0,0,0,0.06)">
+    <h3 style="margin-bottom:8px">Education</h3>
+    <div class="muted-small">BCA — A.M. Jain College • Class of 2027</div>
+  </section>
+
+  <aside class="card fade-up in">
+    <h2>Contact</h2>
+    <p class="muted-small">Main contact: <strong>GitHub</strong></p>
+    <a class="btn btn-primary" href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
+
+    <hr style="margin:16px 0;border:none;border-top:1px solid rgba(0,0,0,0.06)">
+    <h3>Quick Contact</h3>
+    <form id="contact" onsubmit="event.preventDefault();alert('This contact form is a demo. Add backend to enable sending.');">
+      <input type="text" placeholder="Your name" required>
+      <input type="email" placeholder="Your email" required>
+      <textarea placeholder="Message (interest, collaboration, etc.)" required></textarea>
+      <button class="btn btn-primary" type="submit">Send Message</button>
+    </form>
+  </aside>
+
+  <section class="card fade-up in">
+    <h2>Skills</h2>
+    <p class="muted-small">A mix of technical learning and creative skills. Progress shown for areas currently developing.</p>
+    <div style="margin-top:12px">
+      <div class="skill">
+        <div class="label"><span>C++ (learning)</span><span>40%</span></div>
+        <div class="bar"><i style="width:40%"></i></div>
+      </div>
+      <div class="skill">
+        <div class="label"><span>Python (learning)</span><span>35%</span></div>
+        <div class="bar"><i style="width:35%"></i></div>
+      </div>
+      <div class="skill">
+        <div class="label"><span>Data Structures (learning)</span><span>30%</span></div>
+        <div class="bar"><i style="width:30%"></i></div>
+      </div>
+      <div class="skill">
+        <div class="label"><span>Web Design (learning)</span><span>30%</span></div>
+        <div class="bar"><i style="width:30%"></i></div>
+      </div>
+      <div class="skill">
+        <div class="label"><span>Drawing & Creativity</span><span>70%</span></div>
+        <div class="bar"><i style="width:70%"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="card fade-up in">
+    <h2>Achievements</h2>
+    <p class="muted-small">Sport medals and creative accomplishments. Add images or certificates here to strengthen this section.</p>
+    <div class="grid-2" style="margin-top:12px">
+      <div class="art-placeholder">🏅 Sports Medals</div>
+      <div class="art-placeholder">🎨 Drawings & Sketches</div>
+    </div>
+  </aside>
+
+  <section class="card fade-up in">
+    <h2>Portfolio</h2>
+    <p class="muted-small">Projects are in progress — this space will showcase coding projects, websites, and creative work as they are completed.</p>
+    <div style="margin-top:12px" class="grid-2">
+      <div class="art-placeholder">Project Placeholder</div>
+      <div class="art-placeholder">Project Placeholder</div>
+    </div>
+  </section>
+
+  <aside class="card fade-up in">
+    <h2>Notes</h2>
+    <p class="muted-small">Tone: optimistic, modern, and creative. Keep content concise. Leave easy-to-edit placeholders for future projects and certifications.</p>
+  </aside>
+
+</main>
+
+<footer>
+  <div>Made with care • Sunset glow theme • Built for Amirtha R.J</div>
+</footer>
+
+  </div>  <script>
+    // small script to reveal fade-up elements when in viewport (simple)
+    (function(){
+      const els = document.querySelectorAll('.fade-up');
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in') });
+      },{threshold:0.12});
+      els.forEach(n => io.observe(n));
+    })();
+  </script></body>
+</html>
